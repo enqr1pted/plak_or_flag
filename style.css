@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+header {
+    font-family: "Rubik Mono One";
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.main_h1 {
+    display: inline-block;
+    border: 4px solid #ffd60a;
+    padding: 0 100px;
+    border-radius: 18px;
+    font-size: 96px;
+    font-style: italic;
+    color: white;
+    margin-top: 20px;
+    -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.main_h1:hover{
+    color: #87ee27; /* Меняем цвет текста */
+  }
+
+.main_h2 {
+    position: relative;
+    font-size: 48px;
+    margin-top: 40px;
+}
+
+main {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.main_button {
+    font-family: "Rubik Mono One";
+    font-size: 24px;
+    
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: #8145e2;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.main_button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.main_button:active {
+    color: #000
+}
+
+.main_button:active:after {
+    background: transparent;
+}
+
+.main_button:hover:before {
+    opacity: 1;
+}
+
+.main_button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffd60a;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+footer {
+    background: #ffd60a;
+    font-family: "Rubik Mono One";
+    text-align: center;
+    width: 100%;
+}
+
+.all_img {
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px; /* Задаём радиус скругления в пикселях */
+}
+
+
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+}
+
+.div_ram {
+    border: 5px solid black; /* Размер и цвет рамки */
+    border-radius: 30px; /* Скругленные углы */
+    padding: 10px; /* Внутренние отступы */
+    display: block; /* Блочный элемент */
+    margin: 30px auto 0; /* Центрирование рамки и отступ сверху */
+    width: fit-content; /* Ширина по содержимому */
+}
+
+.country_name {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #1284ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: "Rubik Mono One";
+    font-size: 48px;
+    display: none; /* Скрыть элемент по умолчанию */
+}

@@ -1,4 +1,4 @@
-// Список флагов с названиями стран
+// массив флагов Ы
 let flags = [
     { image: 'afganistan.png', country: 'Афганистан' },
     { image: 'australia.png', country: 'Австралия' },
@@ -107,24 +107,21 @@ let flags = [
     { image: 'va.png', country: 'Страна Олега' }
 ];
 
-// Пул доступных цветов для фона плашки с ответом
+// Пул доступных цветов
 const colors = ['#ef233c', '#e053ce', '#00a693', '#ffd506', '#0effd9', '#ce001b', '#008a00', '#61cdfb'];
 
-// Переменная для хранения текущего индекса флага
 let currentIndex = null;
 
-// Функция для генерации случайного числа в заданном диапазоне
+// Функция для генерации случайного числа
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Функция для выбора случайного цвета из массива и его удаления из списка
 function getRandomColor() {
     const index = getRandomInt(0, colors.length - 1);
     return colors.splice(index, 1)[0]; // Удаляем выбранный цвет из массива и возвращаем его
 }
 
-// Функция для генерации случайного флага и его отображения
 function generateFlag() {
     // Перемешиваем флаги, если все они были использованы
     if (flags.length === 0) {
@@ -244,7 +241,6 @@ function generateFlag() {
     flagImage.src = flag.image;
 }
 
-// Функция для отображения названия страны текущего флага с рандомным цветом фона
 function showCountryName() {
     // Проверяем, был ли сгенерирован флаг
     if (currentIndex === null) {
@@ -254,7 +250,6 @@ function showCountryName() {
 
     const flag = flags[currentIndex];
 
-    // Выбираем и устанавливаем случайный цвет фона
     const randomColor = getRandomColor();
 
     const countryName = document.getElementById('countryName');
@@ -264,8 +259,6 @@ function showCountryName() {
 
     setTimeout(function() {
         countryName.style.display = 'none';
-
-        // Возвращаем использованный цвет обратно в массив
         colors.push(randomColor);
     }, 1000);
 }

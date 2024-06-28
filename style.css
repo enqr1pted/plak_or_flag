@@ -36,7 +36,7 @@ header {
 }
 
 .main_h1:hover{
-    color: #87ee27; /* Меняем цвет текста */
+    color: #87ee27;
   }
 
 .main_h2 {
@@ -127,7 +127,7 @@ footer {
     object-fit: contain;
     display: block;
     margin: 0 auto;
-    border-radius: 20px; /* Задаём радиус скругления в пикселях */
+    border-radius: 20px;
 }
 
 
@@ -142,12 +142,12 @@ footer a:hover {
 }
 
 .div_ram {
-    border: 5px solid black; /* Размер и цвет рамки */
-    border-radius: 30px; /* Скругленные углы */
-    padding: 10px; /* Внутренние отступы */
-    display: block; /* Блочный элемент */
-    margin: 30px auto 0; /* Центрирование рамки и отступ сверху */
-    width: fit-content; /* Ширина по содержимому */
+    border: 5px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    display: block;
+    margin: 30px auto 0; 
+    width: fit-content;
 }
 
 .country_name {
@@ -162,5 +162,5 @@ footer a:hover {
     border-radius: 10px;
     font-family: "Rubik Mono One";
     font-size: 48px;
-    display: none; /* Скрыть элемент по умолчанию */
+    display: none; /* скрыл элемент до первого генера флага */
 }

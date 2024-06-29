@@ -178,6 +178,7 @@ footer a:hover {
 }
 
 .div_ram {
+    position: relative;
     border: 5px solid white;
     border-radius: 50px;
     padding: 10px;
@@ -188,7 +189,7 @@ footer a:hover {
 
 .country_name {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -198,21 +199,7 @@ footer a:hover {
     border-radius: 10px;
     font-family: "Rubik Mono One";
     font-size: 48px;
-    display: none; /* скрыл элемент до первого генера флага */
+    display: none; /* Скрыт до генерации флага */
     user-select: none;
     cursor: default;
-}
-
-@media (min-width: 768px) {
-    .country_name {
-        font-size: 32px;
-        padding: 15px 30px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .country_name {
-        font-size: 48px;
-        padding: 20px 40px;
-    }
 }

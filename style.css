@@ -48,6 +48,7 @@ header {
     border-radius: 18px;
     overflow: hidden;
     z-index: 1;
+    user-select: none;
 }
 
 .main_h1::before {
@@ -73,12 +74,12 @@ header {
     100% { background-position: 0 0; }
 }
 
-
 .main_h2 {
     position: relative;
     font-size: 48px;
     margin-top: 40px;
     color: #FFFFFF;
+    user-select: none;
 }
 
 main {
@@ -100,6 +101,7 @@ main {
     z-index: 0;
     border-radius: 10px;
     margin-top: 30px;
+    user-select: none;
 }
 
 .main_button:before {
@@ -163,9 +165,8 @@ footer {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
+    user-select: none;
 }
-
-
 
 footer a {
     color: inherit;
@@ -187,7 +188,7 @@ footer a:hover {
 
 .country_name {
     position: absolute;
-    top: 60%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -196,6 +197,20 @@ footer a:hover {
     padding: 10px 20px;
     border-radius: 10px;
     font-family: "Rubik Mono One";
-    font-size: 48px;
-    display: none; /* скрыл элемент до первого генера флага */
+    font-size: 24px;
+    display: none; /* Скрыл элемент до первого генера флага */
+}
+
+@media (min-width: 768px) {
+    .country_name {
+        font-size: 32px;
+        padding: 15px 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .country_name {
+        font-size: 48px;
+        padding: 20px 40px;
+    }
 }

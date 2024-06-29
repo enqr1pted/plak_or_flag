@@ -188,7 +188,7 @@ footer a:hover {
 
 .country_name {
     position: absolute;
-    top: 63%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -197,8 +197,8 @@ footer a:hover {
     padding: 10px 20px;
     border-radius: 10px;
     font-family: "Rubik Mono One";
-    font-size: 24px;
-    display: none; /* Скрыл элемент до первого генера флага */
+    font-size: 48px;
+    display: none; /* скрыл элемент до первого генера флага */
     user-select: none;
     cursor: default;
 }
